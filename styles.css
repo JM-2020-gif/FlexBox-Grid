@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    background-image: radial-gradient(circle, #b94bf8, #3a1957);
+    background-repeat: repeat;
+    font-family: "Public Sans", sans-serif;
+    font-size: 1.2rem;
+    min-height: 100%;
+}
+
+.header {
+    grid-area: header;
+    background-color: royalblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main {
+    grid-area: main;
+    background-color: lawngreen;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-item {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 2rem;
+    width: 400px;
+    height: auto;
+
+}
+
+.imgboxes {
+    width: 300px;
+    height: 200px;
+    background: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infboxes {
+    width: 200px;
+    height: 100px;
+    background: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    width: 100px;
+    height: 100px;
+    background: red;
+    display: flex;
+    align-items: initial;
+    justify-content: center;
+}
+
+
+.footer {
+    grid-area: footer;
+    background-color: darkorange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-container>* {
+    box-shadow: -1px 1px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+
+}
+
+.grid-container {
+    display: grid;
+    min-height: 100%;
+    grid-template:
+        "header"100px "main"auto "footer"80px / 500px;
+    /*Ancho de cajas de header, main y footer */
+}
+
+@media (min-width: 600px) {
+    .grid-container {
+        grid-template:
+            "header"100px "main"auto "footer"80px / 1000px;
+        /*Ancho de cajas de header, main y footer */
+    }
+
+    .grid-item {
+        width: 350px;
+        height: auto;
+    }
+
+    .imgboxes {
+        width: 350px;
+        height: 200px;
+    }
+
+    .infboxes {
+        width: 250px;
+        height: 100px;
+    }
+
+    .button {
+        width: 98px;
+        height: 100px;
+    }
+}
+
+@media (min-width: 900px) {
+    .grid-container {
+        grid-template:
+            "header"100px "main"auto "footer"80px / 1100px;
+        /*Ancho de cajas de header, main y footer */
+    }
+
+    .grid-item {
+        width: 300px;
+        height: auto;
+    }
+
+    .imgboxes {
+        width: 300px;
+        height: 200px;
+    }
+
+    .infboxes {
+        width: 198px;
+        height: 100px;
+    }
+
+    .button {
+        width: 100px;
+        height: 100px;
+    }
+}
